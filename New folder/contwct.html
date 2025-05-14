@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Feedback Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      padding: 20px;
+    }
+
+    .feedback-form {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .feedback-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .feedback-form input,
+    .feedback-form textarea,
+    .feedback-form select {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .feedback-form button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .feedback-form button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="feedback-form">
+    <h2>Feedback Form</h2>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="_replyto" placeholder="Your email" required>
+
+      <label for="rating">Rating</label>
+      <select id="rating" name="rating" required>
+        <option value="">--Select--</option>
+        <option value="5">⭐⭐⭐⭐⭐ (5/5)</option>
+        <option value="4">⭐⭐⭐⭐ (4/5)</option>
+        <option value="3">⭐⭐⭐ (3/5)</option>
+        <option value="2">⭐⭐ (2/5)</option>
+        <option value="1">⭐ (1/5)</option>
+      </select>
+
+      <label for="comments">Comments</label>
+      <textarea id="comments" name="comments" placeholder="Your message..." rows="4" required></textarea>
+
+      <button type="submit">Send Feedback</button>
+    </form>
+  </div>
+
+</body>
+</html>
